@@ -6,8 +6,6 @@ class CreateHeadphones < ActiveRecord::Migration[6.0]
       t.decimal :weight, precision: 5, scale: 2
       t.string :description
       t.boolean :in_stock
-      t.integer :brand_id
-      t.integer :category_id
 
       t.timestamps
     end

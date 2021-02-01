@@ -14,12 +14,14 @@ ActiveRecord::Schema.define(version: 2021_02_01_170217) do
 
   create_table "brands", force: :cascade do |t|
     t.string "name"
+    t.integer "headphone_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.integer "headphone_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,8 +32,6 @@ ActiveRecord::Schema.define(version: 2021_02_01_170217) do
     t.decimal "weight", precision: 5, scale: 2
     t.string "description"
     t.boolean "in_stock"
-    t.integer "brand_id"
-    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
