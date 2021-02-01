@@ -5,6 +5,7 @@ class CreateHeadphones < ActiveRecord::Migration[6.0]
       t.integer :price
       t.integer :weight
       t.string :description
+      t.boolean :in_stock
 
       t.timestamps
     end
