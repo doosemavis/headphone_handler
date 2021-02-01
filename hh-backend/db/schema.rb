@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(version: 2021_02_01_170217) do
 
   create_table "headphones", force: :cascade do |t|
     t.string "name"
-    t.integer "price"
-    t.integer "weight"
+    t.decimal "price", precision: 5, scale: 2
+    t.decimal "weight", precision: 5, scale: 2
     t.string "description"
     t.boolean "in_stock"
     t.datetime "created_at", precision: 6, null: false
