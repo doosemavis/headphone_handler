@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import { getBrands } from './actions/brands.js';
+import BrandForm from './containers/BrandForm.js';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
     return (
       <div className="App">
         <h2>Create Brands</h2>
+        <BrandForm/>
         <hr/>
         <h2>Headphone Brands</h2>
         <li>

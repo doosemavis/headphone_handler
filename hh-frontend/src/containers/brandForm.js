@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class brandForm extends Component {
+export default class BrandForm extends Component {
     state = {
         brand: {
             name: "",
@@ -16,13 +16,19 @@ export default class brandForm extends Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         const brand = {...this.state.brand}
+        console.log(brand)
     }
     
     render() {
         return (
-            <div>
-                
-            </div>
+            <form onSubmit={this.handleOnSubmit}>
+                <input 
+                type="text"
+                value={this.state.brand.name}
+                onChange={this.handleOnChange}
+                />
+                <button type="submit">Add Brand</button>
+            </form>
         )
     }
 }
