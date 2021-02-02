@@ -5,6 +5,13 @@ const brandReducer = (state = {brands: [], loading: false}, action) => {
                 ...state,
                 loading: true
             }
+        
+        case "FETCH_BRANDS":
+            return {
+                ...state,
+                brands: action.payload,
+                loading: false,
+            }
 
         default:
             return state;
