@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import { getBrands } from './actions/brands.js';
 
 class App extends Component {
   render() {
@@ -8,10 +9,12 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h2>Headphone Brands</h2>
-        <hr/>
         <h2>Create Brands</h2>
+        <hr/>
+        <h2>Headphone Brands</h2>
+        <li>
         {this.props.loading ? <h3>Loading. . .</h3> : brandsLis}
+        </li>
       </div>
     );
   }
@@ -25,4 +28,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { getBrands })(App);
