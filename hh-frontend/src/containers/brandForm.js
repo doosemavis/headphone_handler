@@ -21,7 +21,13 @@ class BrandForm extends Component {
         event.preventDefault()
         const brand = {...this.state.brand}
         console.log(brand)
-
+        this.props.addBrand(brand)
+        this.setState({
+            brand: {
+                name: "",
+            },
+            loading: false
+        })
     }
     
     render() {
