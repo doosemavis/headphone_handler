@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { addBrand } from '../actions/brands.js';
+import { connect } from 'react-redux';
 
-export default class BrandForm extends Component {
+class BrandForm extends Component {
     state = {
         brand: {
             name: "",
@@ -8,8 +10,8 @@ export default class BrandForm extends Component {
     }
 
     handleOnChange = (event) => {
-        this.setState({...state,
-            brand: {...state.brand,
+        this.setState({...this.state,
+            brand: {...this.state.brand,
                 name: event.target.value
             }
         })
@@ -19,6 +21,7 @@ export default class BrandForm extends Component {
         event.preventDefault()
         const brand = {...this.state.brand}
         console.log(brand)
+
     }
     
     render() {
@@ -34,3 +37,5 @@ export default class BrandForm extends Component {
         )
     }
 }
+
+export default connect(null, {addBrand})(BrandForm);
