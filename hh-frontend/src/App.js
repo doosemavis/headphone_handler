@@ -5,7 +5,13 @@ import { getBrands } from './actions/brands.js';
 import BrandForm from './containers/BrandForm.js';
 
 class App extends Component {
+  
+  omponentDidMount() {
+    this.props.getBrands()
+  }
+
   render() {
+    console.log("Rendering")
     const brandsLis = this.props.brands.map((br) => <li key={br.id}>{br.name}</li>)
 
     return (
