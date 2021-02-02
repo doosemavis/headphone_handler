@@ -8,8 +8,10 @@ export default class BrandForm extends Component {
     }
 
     handleOnChange = (event) => {
-        this.setState({
-            name: event.target.value
+        this.setState({...state,
+            brand: {...state.brand,
+                name: event.target.value
+            }
         })
     }
 
