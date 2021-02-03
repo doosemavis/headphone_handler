@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import BrandContainer from './containers/BrandContainer.js';
 
 class App extends Component {
@@ -10,9 +10,18 @@ class App extends Component {
 
     return (
       <Router>
-        <Route exact path="/" component={BrandContainer}/>
-        <Route exact path="/brands" />
-        <Route exact path="/headphones" />
+        <div className="conatiner">
+          <nav>
+              <Link to="/">Home</Link>
+              <br/>
+              <Link to="/headphones">Headphones</Link>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={BrandContainer}/>
+            <Route exact path="/brands" />
+            <Route exact path="/headphones" />
+        </Switch>
+        </div>
       </Router>
     );
   }
