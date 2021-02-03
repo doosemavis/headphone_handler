@@ -42,36 +42,41 @@ class HeadphoneForm extends Component {
     render() {
         return (
             <form onSubmit={this.handleOnSubmit}>
-                <input
+                Name: <input
                 type="text"
                 name="name"
                 value={this.state.headphone.name}
                 onChange={this.handleOnChange}
                 />
-                <input
+                <br/>
+                Price: <input
                 type="text"
                 name="price"
                 value={this.state.headphone.price}
                 onChange={this.handleOnChange}
                 />
-                <input
+                <br/>
+                Weight (oz): <input
                 type="text"
                 name="weight"
                 value={this.state.headphone.weight}
                 onChange={this.handleOnChange}
                 />
-                <input
+                <br/>
+                Description: <input
                 type="text"
                 name="description"
                 value={this.state.headphone.description}
                 onChange={this.handleOnChange}
                 />
-                <input
-                type="text"
+                <br/>
+                In Stock?: <input
+                type="checkbox"
                 name="in_stock"
                 value={this.state.headphone.in_stock}
                 onChange={this.handleOnChange}
                 />
+                <br/>
                 <button type="submit">Add Headphone</button>
             </form>
         )
