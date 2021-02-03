@@ -3,6 +3,7 @@ import './App.css';
 import { connect } from 'react-redux';
 import { getBrands } from './actions/brands.js';
 import BrandForm from './containers/BrandForm.js';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 class App extends Component {
   
@@ -15,15 +16,20 @@ class App extends Component {
     const brandsLis = this.props.brands.map((br) => <li key={br.id}>{br.name}</li>)
 
     return (
-      <div className="App">
-        <h2>Create Brands</h2>
-        <BrandForm/>
-        <hr/>
-        <h2>Headphone Brands</h2>
-          <ol>
-              {this.props.loading ? <h3>Loading. . .</h3> : brandsLis}
-          </ol>
-      </div>
+      <Router>
+        <div className="App">
+          <h2>Create Brands</h2>
+          <BrandForm/>
+          <hr/>
+          <h2>Headphone Brands</h2>
+            <ol>
+                {this.props.loading ? <h3>Loading. . .</h3> : brandsLis}
+            </ol>
+        </div>
+        <Route exact path="/" />
+        <Route exact path="/brands" />
+        <Route exact path="/headphones" />
+      </Router>
     );
   }
 }
