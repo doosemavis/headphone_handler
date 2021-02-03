@@ -6,7 +6,7 @@ import BrandForm from './containers/BrandForm.js';
 
 class App extends Component {
   
-  omponentDidMount() {
+  componentDidMount() {
     this.props.getBrands()
   }
 
@@ -20,9 +20,9 @@ class App extends Component {
         <BrandForm/>
         <hr/>
         <h2>Headphone Brands</h2>
-        <li>
-        {this.props.loading ? <h3>Loading. . .</h3> : brandsLis}
-        </li>
+          <ol>
+              {this.props.loading ? <h3>Loading. . .</h3> : brandsLis}
+          </ol>
       </div>
     );
   }
