@@ -38,7 +38,7 @@ class HeadphoneForm extends Component {
                 weight: "",
                 description: "",
                 in_stock: true,
-            }
+            },
             loading: false
         })
     }
