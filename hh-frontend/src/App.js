@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import BrandContainer from './containers/BrandContainer.js';
+import HeadphoneContainer from './containers/HeadphoneContainer.js';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={BrandContainer}/>
             <Route exact path="/brands" />
-            <Route exact path="/headphones" />
+            <Route exact path="/headphones" component={HeadphoneContainer} />
         </Switch>
         </div>
       </Router>

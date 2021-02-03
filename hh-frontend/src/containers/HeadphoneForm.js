@@ -17,11 +17,7 @@ class HeadphoneForm extends Component {
     handleOnChange = (event) => {
         this.setState({...this.state,
             headphone: {...this.state.headphone,
-                name: event.target.value,
-                price: event.target.value,
-                weight: event.target.value,
-                description: event.target.value,
-                in_stock: event.target.value,
+                [event.target.name]: event.target.value
             }
         })
     }
@@ -42,16 +38,38 @@ class HeadphoneForm extends Component {
             loading: false
         })
     }
-
-    
     
     render() {
-
         return (
             <form onSubmit={this.handleOnSubmit}>
                 <input
                 type="text"
+                name="name"
                 value={this.state.headphone.name}
+                onChange={this.handleOnChange}
+                />
+                <input
+                type="text"
+                name="price"
+                value={this.state.headphone.price}
+                onChange={this.handleOnChange}
+                />
+                <input
+                type="text"
+                name="weight"
+                value={this.state.headphone.weight}
+                onChange={this.handleOnChange}
+                />
+                <input
+                type="text"
+                name="description"
+                value={this.state.headphone.description}
+                onChange={this.handleOnChange}
+                />
+                <input
+                type="text"
+                name="in_stock"
+                value={this.state.headphone.in_stock}
                 onChange={this.handleOnChange}
                 />
                 <button type="submit">Add Headphone</button>

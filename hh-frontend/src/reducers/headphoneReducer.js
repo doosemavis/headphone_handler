@@ -28,7 +28,7 @@ const headphoneReducer = (state = {headphones: [], loading: false}, action) => {
 
         default:
             return state;
-    } 
+    }
 }
 
 export default headphoneReducer;

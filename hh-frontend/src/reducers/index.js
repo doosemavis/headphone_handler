@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import brandReducer from "./brandReducer.js"
-import headphopneReducer from "./headphoneReducer.js"
+import headphoneReducer from "./headphoneReducer.js"
 
 const rootReducer = combineReducers({
     brandReducer,
-    headphopneReducer,
+    headphoneReducer,
 })
 
 export default rootReducer;
