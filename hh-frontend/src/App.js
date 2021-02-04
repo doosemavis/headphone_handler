@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import BrandContainer from './containers/BrandContainer.js';
 import HeadphoneContainer from './containers/HeadphoneContainer.js';
 import Home from './containers/Home.js';
+import Navigation from './components/Navigation.js';
 
 class App extends Component {
 
@@ -12,14 +13,8 @@ class App extends Component {
 
     return (
       <Router>
+        <Navigation />
         <div className="conatiner">
-          <nav>
-              <Link to="/">Home</Link>
-              <br/>
-              <Link to="/brands">Brands</Link>
-              <br/>
-              <Link to="/headphones">Headphones</Link>
-          </nav>
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/brands" component={BrandContainer}/>

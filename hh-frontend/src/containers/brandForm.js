@@ -35,6 +35,7 @@ class BrandForm extends Component {
             <form onSubmit={this.handleOnSubmit}>
                 <input 
                 type="text"
+                name="brand"
                 value={this.state.brand.name}
                 onChange={this.handleOnChange}
                 />
