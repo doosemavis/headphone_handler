@@ -15,11 +15,13 @@ class App extends Component {
           <nav>
               <Link to="/">Home</Link>
               <br/>
+              <Link to="/brands">Brands</Link>
+              <br/>
               <Link to="/headphones">Headphones</Link>
           </nav>
           <Switch>
-            <Route exact path="/" component={BrandContainer}/>
-            <Route exact path="/brands" />
+            <Route exact path="/" />
+            <Route exact path="/brands" component={BrandContainer}/>
             <Route exact path="/headphones" component={HeadphoneContainer} />
         </Switch>
         </div>
