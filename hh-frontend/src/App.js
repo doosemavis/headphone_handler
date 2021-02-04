@@ -3,6 +3,7 @@ import './App.css';
 import { Route, BrowserRouter as Router, Switch, Link } from 'react-router-dom';
 import BrandContainer from './containers/BrandContainer.js';
 import HeadphoneContainer from './containers/HeadphoneContainer.js';
+import Home from './containers/Home.js';
 
 class App extends Component {
 
@@ -20,7 +21,7 @@ class App extends Component {
               <Link to="/headphones">Headphones</Link>
           </nav>
           <Switch>
-            <Route exact path="/" />
+            <Route exact path="/" component={Home}/>
             <Route exact path="/brands" component={BrandContainer}/>
             <Route exact path="/headphones" component={HeadphoneContainer} />
         </Switch>
