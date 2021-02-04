@@ -1,7 +1,7 @@
 export const getBrands = () => {
     return (dispatch) => {
         dispatch({type: "LOADING_BRANDS"})
-        fetch('/brands')
+        fetch('http://localhost:3001/brands')
         .then(res => res.json())
         .then(brands => dispatch({type: "FETCH_BRANDS", payload: brands}))
     }
@@ -10,7 +10,7 @@ export const getBrands = () => {
 export const addBrand = (brand) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND"})
-        fetch('/brands', {
+        fetch('http:localhost:3001/brands', {
             method: 'POST',
             body: JSON.stringify(brand),
             headers: {
@@ -18,6 +18,6 @@ export const addBrand = (brand) => {
             }
         })
         .then(res => res.json())
-        .then(brand => dispatch({type: "BRAND_ADDED"}))
+        .then(brand => dispatch({type: "BRAND_ADDED", payload: brand}))
     }
 }
