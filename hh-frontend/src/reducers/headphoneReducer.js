@@ -19,7 +19,7 @@ const headphoneReducer = (state = {headphones: [], loading: false}, action) => {
                 loading: true
             } 
         
-        case "BRAND_ADDED":
+        case "HEADPHONE_ADDED":
             return {
                 ...state,
                 headphones: [...state.headphones, action.payload],

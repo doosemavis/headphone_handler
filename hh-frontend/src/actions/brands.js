@@ -10,7 +10,7 @@ export const getBrands = () => {
 export const addBrand = (brand) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND"})
-        fetch('http:localhost:3001/brands', {
+        fetch('http://localhost:3001/brands', {
             method: 'POST',
             body: JSON.stringify(brand),
             headers: {

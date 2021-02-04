@@ -10,7 +10,7 @@ export const getHeadphones = () => {
 export const addHeadphone = (headphone) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND"})
-        fetch('http:localhost:3001/headphones', {
+        fetch('http://localhost:3001/headphones', {
             method: 'POST',
             body: JSON.stringify(headphone),
             headers: {

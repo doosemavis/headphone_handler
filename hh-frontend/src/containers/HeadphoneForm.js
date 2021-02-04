@@ -10,7 +10,7 @@ class HeadphoneForm extends Component {
             price: "",
             weight: "",
             description: "",
-            in_stock: true,
+            // in_stock: true,
         }
     }
 
@@ -24,7 +24,9 @@ class HeadphoneForm extends Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        const headphone = {...this.state.headphone}
+        const headphone = {
+            ...this.state.headphone, 
+            brand_id: null}
         console.log(headphone)
         this.props.addHeadphone(headphone)
         this.setState({
@@ -33,7 +35,7 @@ class HeadphoneForm extends Component {
                 price: "",
                 weight: "",
                 description: "",
-                in_stock: true,
+                // in_stock: true,
             },
             loading: false
         })
@@ -70,12 +72,12 @@ class HeadphoneForm extends Component {
                 onChange={this.handleOnChange}
                 />
                 <br/>
-                In Stock?: <input
+                {/* In Stock?: <input
                 type="checkbox"
                 name="in_stock"
                 value={this.state.headphone.in_stock}
                 onChange={this.handleOnChange}
-                />
+                /> */}
                 <br/>
                 <button type="submit">Add Headphone</button>
             </form>

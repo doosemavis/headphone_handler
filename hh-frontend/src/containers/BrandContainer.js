@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import BrandForm from './BrandForm.js';
 import { connect } from 'react-redux';
 import { getBrands } from '../actions/brands.js';
+import { Link } from 'react-router-dom';
 
 class BrandContainer extends Component {
     componentDidMount() {
@@ -19,7 +20,7 @@ class BrandContainer extends Component {
             <hr/>
             <h2>Headphone Brands</h2>
                 <ol>
-                    {this.props.loading ? <h3>Loading. . .</h3> : brandsOls}
+                    {this.props.loading ? <h3>Loading. . .</h3> : <Link to={`/brand/${props.brand.id}/headphones`}>{brandsOls}</Link>}
                 </ol>
             </div>
         )
