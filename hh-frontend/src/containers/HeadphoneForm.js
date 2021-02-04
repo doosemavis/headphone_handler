@@ -26,7 +26,7 @@ class HeadphoneForm extends Component {
         event.preventDefault()
         const headphone = {
             ...this.state.headphone, 
-            brand_id: null}
+            brand_id: this.props.match.params.id}
         console.log(headphone)
         this.props.addHeadphone(headphone)
         this.setState({
