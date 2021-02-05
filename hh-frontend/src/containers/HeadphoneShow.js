@@ -7,10 +7,12 @@ class HeadphoneShow extends Component {
         
         return (
             <div>
-                {headphone.name}
-                {headphone.price}
-                {headphone.weight}
-                {headphone.description}
+                <br></br>
+                <hr/>
+                <h2>Name: {headphone.name}</h2>
+                <h3>Price: ${headphone.price} USD</h3>
+                <h3>Weight: {headphone.weight}oz</h3>
+                <h3>Description: {headphone.description}</h3>
             </div>
         )
     }
@@ -19,7 +21,7 @@ class HeadphoneShow extends Component {
 const mapStateToProps = (state) => {
     console.log("I am state", state)
     return {
-      headphones: state.headphoneReducer.brands
+      headphones: state.headphoneReducer.headphones
     }
   }
 
