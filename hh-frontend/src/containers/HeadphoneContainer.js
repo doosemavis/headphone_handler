@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import HeadphoneForm from './HeadphoneForm.js';
 import { connect } from 'react-redux';
 import { getHeadphones } from '../actions/headphones.js';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 class HeadphoneContainer extends Component {
     componentDidMount() {

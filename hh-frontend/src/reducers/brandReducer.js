@@ -34,8 +34,9 @@ const brandReducer = (state = {brands: [], loading: false}, action) => {
         
         case "BRAND_HEADPHONE_ADDED":
             const newBrands = state.brands.map((br) => {
-                if (`${br.id}` == action.payload) {
-                   return br.headphones.push(action.payload)
+                if (br.id === action.payload.brand_id) {
+                    return {...br, headphones: [...br.headphones, action.payload]}
+                //    return br.headphones.push(action.payload)
                 } else {
                     return br
                 }
