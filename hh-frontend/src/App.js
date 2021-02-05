@@ -20,7 +20,8 @@ class App extends Component {
             <Route exact path="/" component={Home}/>
             <Route exact path="/brands" component={BrandContainer}/>
             <Route exact path="/brands/:id" component={BrandShow} />
-            <Route path="/brands/:brand_id/headphones" component={HeadphoneContainer} />
+            <Route path="/headphones" component={HeadphoneContainer} />
+            {/* <Route path="/brands/:brand_id/headphones" component={} /> */}
         </Switch>
         </div>
       </Router>

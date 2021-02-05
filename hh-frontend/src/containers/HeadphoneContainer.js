@@ -15,10 +15,8 @@ class HeadphoneContainer extends Component {
         
         return (
             <div className="App">
-            <h2>Add Headphones to Brand</h2>
-            <HeadphoneForm />
-            <hr/>
             <h2>Headphones</h2>
+            <hr/>
     
                 <ol>
                     {this.props.loading ? <h3>Loading. . .</h3> : hphoneOls}
