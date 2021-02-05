@@ -13,7 +13,6 @@ class HeadphoneContainer extends Component {
         console.log("Rendering")
         const hphoneOls = this.props.headphones.map((hp) => <li key={hp.id}>{hp.name}</li>)
         
-    
         return (
             <div className="App">
             <h2>Add Headphones to Brand</h2>

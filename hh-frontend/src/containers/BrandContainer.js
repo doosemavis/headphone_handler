@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import BrandForm from './BrandForm.js';
+import Brand from '../components/Brand.js';
 import { connect } from 'react-redux';
 import { getBrands } from '../actions/brands.js';
-import { Link } from 'react-router-dom';
+
 
 class BrandContainer extends Component {
     componentDidMount() {
@@ -11,8 +12,8 @@ class BrandContainer extends Component {
     
     render() {
         console.log("Rendering")
-        const brandsOls = this.props.brands.map((br) => <li key={br.id}>{br.name}</li>)
-    
+        const brandsOls = this.props.brands.map((br) => <Brand brand={br}/> )
+
         return (
             <div className="App">
             <h2>Create Brands</h2>
@@ -20,7 +21,7 @@ class BrandContainer extends Component {
             <hr/>
             <h2>Headphone Brands</h2>
                 <ol>
-                    {this.props.loading ? <h3>Loading. . .</h3> : <Link>{brandsOls}</Link>}
+                    {this.props.loading ? <h3>Loading. . .</h3> : brandsOls}
                 </ol>
             </div>
         )

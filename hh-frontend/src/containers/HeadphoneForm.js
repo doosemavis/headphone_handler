@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addHeadphone } from '../actions/headphones.js';
+import { addBrandHeadphone } from '../actions/brands.js';
 import { connect } from 'react-redux';
 
 
@@ -26,9 +26,9 @@ class HeadphoneForm extends Component {
         event.preventDefault()
         const headphone = {
             ...this.state.headphone, 
-            brand_id: this.props.match.params.id}
+            brand_id: this.props.brand_id}
         console.log(headphone)
-        this.props.addHeadphone(headphone)
+        this.props.addBrandHeadphone(headphone)
         this.setState({
             headphone: {
                 name: "",
@@ -85,4 +85,4 @@ class HeadphoneForm extends Component {
     }
 }
 
-export default connect(null, {addHeadphone})(HeadphoneForm);
+export default connect(null, {addBrandHeadphone})(HeadphoneForm);

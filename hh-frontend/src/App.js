@@ -19,7 +19,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/brands" component={BrandContainer}/>
-            <Route exact path="/brand/:brand_id/headphones" component={BrandShow} />
+            <Route exact path="/brands/:id" component={BrandShow} />
             <Route path="/brands/:brand_id/headphones" component={HeadphoneContainer} />
         </Switch>
         </div>
