@@ -7,18 +7,18 @@ import headphones from '../images/headphones.jpg';
 const NavBar = () => {
     return (
         <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="/">
-                <img
-                alt=""
-                src={headphones}
-                width="40"
-                height="40"
-                className="d-inline-block align-top"/>
-            </Navbar.Brand>
-                <Nav className="mr-auto">
+            <Nav className="mr-auto">
+                <Navbar.Brand href="/">
+                    <img
+                    alt=""
+                    src={headphones}
+                    width="40"
+                    height="40"
+                    className="d-inline-block align-top"/>
+                </Navbar.Brand>
                 <Nav.Link href="/brands">Brands</Nav.Link>
                 <Nav.Link href="/headphones">Headphones</Nav.Link>
-            </Nav>
+                </Nav>
         </Navbar>
     )
 }
