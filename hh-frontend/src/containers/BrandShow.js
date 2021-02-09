@@ -26,6 +26,6 @@ const mapStateToProps = (state) => {
     return {
       brands: state.brandReducer.brands
     }
-  }
+}
 
 export default connect(mapStateToProps)(BrandShow);

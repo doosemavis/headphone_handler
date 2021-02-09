@@ -6,7 +6,8 @@ import BrandShow from './containers/BrandShow.js';
 import HeadphoneContainer from './containers/HeadphoneContainer.js';
 import HeadphoneShow from './containers/HeadphoneShow.js';
 import Home from './components/Home.js';
-import Navigation from './components/Navigation.js';
+import NavBar from './components/NavBar.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -15,8 +16,8 @@ class App extends Component {
 
     return (
       <Router>
-        <Navigation />
-        <div className="conatiner">
+        <NavBar />
+        <div className="container">
           <Switch>
             <Route exact path="/" component={Home}/>
             <Route exact path="/brands" component={BrandContainer}/>
