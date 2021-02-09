@@ -24,7 +24,6 @@ class App extends Component {
             <Route exact path="/brands/:id" component={BrandShow} />
             <Route exact path="/headphones" component={HeadphoneContainer} />
             <Route exact path="/headphones/:id" component={HeadphoneShow} />
-            {/* <Route path="/brands/:brand_id/headphones" component={} /> */}
           </Switch>
         </div>
       </Router>

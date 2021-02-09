@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { getHeadphones } from '../actions/headphones.js';
+import Headphone from '../components/Headphone.js';
 // import { Link } from 'react-router-dom';
 
 class HeadphoneContainer extends Component {
@@ -10,13 +11,12 @@ class HeadphoneContainer extends Component {
     
     render() {
         console.log("Rendering")
-        const hphoneOls = this.props.headphones.map((hp) => <li key={hp.id}>{hp.name}</li>)
+        const hphoneOls = this.props.headphones.map((hp) => <Headphone headphone={hp}/>)
         
         return (
             <div className="App">
             <h2>Headphones</h2>
             <hr/>
-    
                 <ol>
                     {this.props.loading ? <h3>Loading. . .</h3> : hphoneOls}
                 </ol>
