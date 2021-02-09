@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { addBrand } from '../actions/brands.js';
 import { connect } from 'react-redux';
 
