@@ -1,7 +1,9 @@
+const URL = 'http://localhost:3001'
+
 export const getBrands = () => {
     return (dispatch) => {
         dispatch({type: "LOADING_BRANDS"})
-        fetch('http://localhost:3001/brands')
+        fetch(URL + '/brands')
         .then(res => res.json())
         .then(brands => dispatch({type: "FETCH_BRANDS", payload: brands}))
     }
@@ -10,7 +12,7 @@ export const getBrands = () => {
 export const addBrand = (brand) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND"})
-        fetch('http://localhost:3001/brands', {
+        fetch(URL + '/brands', {
             method: 'POST',
             body: JSON.stringify(brand),
             headers: {
@@ -25,7 +27,7 @@ export const addBrand = (brand) => {
 export const addBrandHeadphone = (headphone) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND_HEADPHONE"})
-        fetch('http://localhost:3001/headphones', {
+        fetch(URL + '/headphones', {
             method: 'POST',
             body: JSON.stringify(headphone),
             headers: {

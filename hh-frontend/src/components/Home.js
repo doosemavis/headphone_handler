@@ -9,6 +9,7 @@ class Home extends Component {
                 <br/>
                 <h1>Welcome to the Headphone Handler</h1>
                 <hr/>
+                <hr/>
                 <h4>Please select a link from the navagation bar above</h4>
             </div>
         )

@@ -1,7 +1,9 @@
+const URL = 'http://localhost:3001'
+
 export const getHeadphones = () => {
     return (dispatch) => {
         dispatch({type: "LOADING_HEADPHONES"})
-        fetch('http://localhost:3001/headphones')
+        fetch(URL + '/headphones')
         .then(res => res.json())
         .then(headphones => dispatch({type: "FETCH_HEADPHONES", payload: headphones}))
     }
