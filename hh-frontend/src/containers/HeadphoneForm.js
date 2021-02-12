@@ -51,19 +51,19 @@ class HeadphoneForm extends Component {
                 onChange={this.handleOnChange}
                 />
                 <br/>
-                Price: <input
+                Price: $<input
                 type="text"
                 name="price"
                 value={this.state.headphone.price}
                 onChange={this.handleOnChange}
                 />
                 <br/>
-                Weight (oz): <input
+                Weight: <input
                 type="text"
                 name="weight"
                 value={this.state.headphone.weight}
                 onChange={this.handleOnChange}
-                />
+                /> oz
                 <br/>
                 Description: <input
                 type="text"
