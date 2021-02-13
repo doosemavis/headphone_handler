@@ -6,11 +6,12 @@ import Headphone from '../components/Headphone.js';
 
 class HeadphoneContainer extends Component {
     componentDidMount() {
+        console.log("Mounted")
         this.props.getHeadphones()
     }
     
     render() {
-        console.log("Rendering")
+        console.log("Rendering", this.props.headphones)
         const hphoneOls = this.props.headphones.map((hp) => <Headphone headphone={hp}/>)
         
         return (
@@ -33,4 +34,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {getHeadphones})(HeadphoneContainer);
+export default connect(mapStateToProps, { getHeadphones })(HeadphoneContainer);

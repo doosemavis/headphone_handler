@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-// import { getHeadphones } from '../actions/headphones.js';
 import { connect } from 'react-redux';
+// import { getHeadphones } from '../actions/headphones.js';
 // import Headphone from '../components/Headphone.js';
 
 class HeadphoneShow extends Component {
-    // componentDidMount() {
-    //     this.props.getHeadphones();
-    // }
     
     render() {
         const headphone = this.props.headphones.find((h) => `${h.id}` === this.props.match.params.id )
