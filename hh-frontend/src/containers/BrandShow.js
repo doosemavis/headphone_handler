@@ -8,7 +8,8 @@ class BrandShow extends Component {
     render() {
         console.log("How ya doin?")
         const brand = this.props.brands.find((b) => `${b.id}` === this.props.match.params.id )
-        const headphoneOls = brand.headphones.map((h) => <Headphone headphone={h}/> )
+        const headphoneOls = brand.headphones.map((h) =>  <Headphone headphone={h}/> )
+
         return (
             <div>
                 <br/>

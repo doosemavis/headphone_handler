@@ -45,4 +45,4 @@ class BrandForm extends Component {
     }
 }
 
-export default connect(null, {addBrand})(BrandForm);
+export default connect(null, { addBrand })(BrandForm);

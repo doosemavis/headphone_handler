@@ -6,13 +6,15 @@ import { getBrands } from '../actions/brands.js';
 
 
 class BrandContainer extends Component {
+
     componentDidMount() {
+        console.log("componentDidMount")
         this.props.getBrands()
     }
     
     render() {
         console.log("Rendering")
-        const brandsOls = this.props.brands.map((br) => <Brand brand={br}/> )
+        const brandsOls = this.props.brands.map((br, index) => <Brand brand={br} key={index} /> )
 
         return (
             <div className="App">
@@ -29,11 +31,15 @@ class BrandContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("I am state", state)
+  console.log(state)
   return {
     brands: state.brandReducer.brands,
     loading: state.brandReducer.loading,
   }
 }
 
-export default connect(mapStateToProps, {getBrands})(BrandContainer);
+const mapDispatchToProps = {
+    getBrands 
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BrandContainer);

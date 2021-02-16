@@ -1,4 +1,6 @@
-const brandReducer = (state = {brands: [], loading: false}, action) => {
+const initState = {brands: [], loading: false}
+
+const brandReducer = (state = initState, action) => {
     switch(action.type) {
         case "LOADING_BRANDS":
             return {

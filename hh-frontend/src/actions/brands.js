@@ -1,5 +1,6 @@
 const URL = 'http://localhost:3001'
 
+// Action Creators
 export const getBrands = () => {
     return (dispatch) => {
         dispatch({type: "LOADING_BRANDS"})

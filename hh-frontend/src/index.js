@@ -10,7 +10,8 @@ import rootReducer from './reducers/index.js'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
-console.log(store)
+// console.log(store)
+// console.log(Provider)
 
 ReactDOM.render(
   <Provider store={store}>
@@ -18,8 +19,6 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
-
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
