@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { getHeadphones } from '../actions/headphones.js';
+import { getHeadphones, addBrandHeadphone } from '../actions/headphones.js';
 import Headphone from '../components/Headphone.js';
 // import { Link } from 'react-router-dom';
 
@@ -34,4 +34,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { getHeadphones })(HeadphoneContainer);
+const mapDispatchToProps = {
+    getHeadphones
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeadphoneContainer);

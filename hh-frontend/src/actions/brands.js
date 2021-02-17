@@ -1,5 +1,7 @@
 const URL = 'http://localhost:3001'
 
+// Action Object Function Creator
+
 // Action Creators
 export const getBrands = () => {
     return (dispatch) => {

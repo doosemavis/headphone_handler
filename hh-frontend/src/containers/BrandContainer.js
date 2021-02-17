@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BrandForm from './BrandForm.js';
 import Brand from '../components/Brand.js';
 import { connect } from 'react-redux';
-import { getBrands } from '../actions/brands.js';
+import { getBrands, addBrand, addBrandHeadphone } from '../actions/brands.js';
 
 
 class BrandContainer extends Component {
@@ -39,7 +39,9 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    getBrands 
+    getBrands,
+    addBrand,
+    addBrandHeadphone
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BrandContainer);
