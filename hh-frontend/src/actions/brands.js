@@ -46,7 +46,13 @@ export const addBrandHeadphone = (headphone) => {
             }
         })
         .then(res => res.json())
-        .then(headphone => dispatch({type: "BRAND_HEADPHONE_ADDED", payload: headphone}))
+        .then(headphone => {
+            if (headphone.id) {
+            dispatch({type: "BRAND_HEADPHONE_ADDED", payload: headphone})
+            } else {
+                alert(headphone)
+            }
+        })
         .catch(alert)
     }
 }
