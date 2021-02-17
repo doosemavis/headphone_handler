@@ -15,6 +15,7 @@ export const getBrands = () => {
 export const addBrand = (brand) => {
     return (dispatch) => {
         dispatch({type: "ADD_BRAND"})
+        
         fetch(URL + '/brands', {
             method: 'POST',
             body: JSON.stringify(brand),
@@ -23,7 +24,14 @@ export const addBrand = (brand) => {
             }
         })
         .then(res => res.json())
-        .then(brand => dispatch({type: "BRAND_ADDED", payload: brand}))
+        .then(brand => {
+            if (brand.id) {
+                dispatch({type: "BRAND_ADDED", payload: brand})
+            } else {
+                alert(brand)
+            }
+        })
+        .catch(alert)
     }
 }
 
@@ -39,5 +47,6 @@ export const addBrandHeadphone = (headphone) => {
         })
         .then(res => res.json())
         .then(headphone => dispatch({type: "BRAND_HEADPHONE_ADDED", payload: headphone}))
+        .catch(alert)
     }
 }
