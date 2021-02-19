@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    getHeadphones
+    getHeadphones 
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HeadphoneContainer);
